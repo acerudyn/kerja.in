@@ -165,14 +165,14 @@
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550"
-              data-toggle="modal" data-target="#LuasBelahKetupat">
+              data-toggle="modal" data-target="#luasBelahKetupat">
               <i class="ri-crop-fill" style="color: #ff5828;"></i>
               <h3><a href="#">L. Belah Ketupat</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600"
-              data-toggle="modal" data-target="#kelBelahKetupat">
+              data-toggle="modal" data-target="#kelilingBelahKetupat">
               <i class="ri-crop-line" style="color: #29cc61;"></i>
               <h3><a href="#">K. Belah Ketupat</a></h3>
             </div>
@@ -186,7 +186,7 @@
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="700"
-              data-toggle="modal" data-target="#kelTrapesium">
+              data-toggle="modal" data-target="#kelilingTrapesium">
               <i class="ri-pencil-ruler-2-line" style="color: #5578ff;"></i>
               <h3><a href="#">Keliling Trapesium</a></h3>
             </div>
@@ -200,12 +200,19 @@
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="800"
-              data-toggle="modal" data-target="#kelLingkaran">
+              data-toggle="modal" data-target="#kelilingLingkaran">
               <i class="ri-focus-line" style="color: #e361ff;"></i>
               <h3><a href="#">Keliling Lingkaran</a></h3>
             </div>
           </div>
-      </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300"
+              data-toggle="modal" data-target="#diameterLingkaran">
+              <i class="ri-contrast-fill" style="color: #ffa76e;"></i>
+              <h3><a href="#">Diameter Lingkaran</a></h3>
+            </div>
+          </div>
+       </div>
     </section><!-- End Features Section -->
 
     <!-- ======= Pricing Section ======= -->
@@ -683,6 +690,247 @@
   </div>
 </div> <!-- End Keliling Layang-layang -->
 
+<!-- Luas Belah Ketupat-->
+<div class="modal fade" id="luasBelahKetupat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Luas Belah Ketupat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus luas = 1/2 x d1 x d2</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Diagonal 1</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_belah_ketupat_d1" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Diagonal 2</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_belah_ketupat_d2" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="luas_belah_ketupat_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_luas_belah_ketupat()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Luas Belah Ketupat -->
+
+<!-- Keliling Belah Ketupat-->
+<div class="modal fade" id="kelilingBelahKetupat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Keliling Belah Ketupat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus keliling = 4 x sisi</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_belah_ketupat_sisi" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="kel_belah_ketupat_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_kel_belah_ketupat()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Keliling Belah Ketupat -->
+
+<!-- Luas Trapesium-->
+<div class="modal fade" id="luasTrapesium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Luas Trapesium</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus luas = 1/2 x (a + c) x t</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi A</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_trapesium_a" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi C</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_trapesium_c" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Tinggi</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_trapesium_t" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="luas_trapesium_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_luas_trapesium()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Luas Trapesium -->
+
+<!-- Keliling Trapesium-->
+<div class="modal fade" id="kelilingTrapesium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Keliling Trapesium</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus keliling = sisi a + sisi b + sisi c + sisi d</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi A</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_trapesium_a" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi B</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_trapesium_b" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi C</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_trapesium_c" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Sisi D</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_trapesium_d" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="kel_trapesium_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_kel_trapesium()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Keliling Trapesium -->
+
+<!-- Luas Lingkaran-->
+<div class="modal fade" id="luasLingkaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Luas Lingkaran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus luas = &pi; x r x r</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Jari-jari (r)</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="luas_lingkaran_r" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="luas_lingkaran_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_luas_lingkaran()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Luas Lingkaran -->
+
+<!-- Keliling Lingkaran-->
+<div class="modal fade" id="kelilingLingkaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Keliling Lingkaran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus keliling = 2 x &pi; x r</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Jari-jari (r)</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="kel_lingkaran_r" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="kel_lingkaran_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_kel_lingkaran()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Keliling Lingkaran -->
+
+<!-- Diameter Lingkaran-->
+<div class="modal fade" id="diameterLingkaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Diameter Lingkaran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h6 class="mb-15">Rumus diameter = 2 x r</h6>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Jari-jari (r)</label>
+            <input type="number" step="0.1" min="0" class="form-control" id="diameter_lingkaran_r" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Hasil</label>
+            <input type="text" class="form-control" id="diameter_lingkaran_hasil" readonly autocomplete="off">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="hitung_diameter_lingkaran()">Hitung</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Diameter Lingkaran -->
+
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
   <div id="preloader"></div>
 
@@ -790,6 +1038,67 @@
       $("#kel_layang_layang_hasil").val(kel);
       $("#kel_layang_layang_a").val('');
       $("#kel_layang_layang_b").val('');
+    }
+
+    function hitung_luas_belah_ketupat(){
+      var d1 = $("#luas_belah_ketupat_d1").val();
+      var d2 = $("#luas_belah_ketupat_d2").val();
+      var luas = 0.5 * d1 * d2;
+      $("#luas_belah_ketupat_hasil").val(luas);
+      $("#luas_belah_ketupat_d1").val('');
+      $("#luas_belah_ketupat_d2").val('');
+    }
+
+    function hitung_kel_belah_ketupat(){
+      var sisi = $("#kel_belah_ketupat_sisi").val();
+      var kel = 4 * sisi;
+      $("#kel_belah_ketupat_hasil").val(kel);
+      $("#kel_belah_ketupat_sisi").val('');
+    }
+
+    function hitung_luas_trapesium(){
+      var a = $("#luas_trapesium_a").val();
+      var c = $("#luas_trapesium_c").val();
+      var t = $("#luas_trapesium_t").val();
+      var luas = 0.5 * (Number(a) + Number(c)) * t;
+      $("#luas_trapesium_hasil").val(luas);
+      $("#luas_trapesium_a").val('');
+      $("#luas_trapesium_c").val('');
+      $("#luas_trapesium_t").val('');
+    }
+
+    function hitung_kel_trapesium(){
+      var a = $("#kel_trapesium_a").val();
+      var b = $("#kel_trapesium_b").val();
+      var c = $("#kel_trapesium_c").val();
+      var d = $("#kel_trapesium_d").val();
+      var kel = Number(a) + Number(b) + Number(c) + Number(d);
+      $("#kel_trapesium_hasil").val(kel);
+      $("#kel_trapesium_a").val('');
+      $("#kel_trapesium_b").val('');
+      $("#kel_trapesium_c").val('');
+      $("#kel_trapesium_d").val('');
+    }
+
+    function hitung_luas_lingkaran(){
+      var r = $("#luas_lingkaran_r").val();
+      var luas = 3.14 * r * r;
+      $("#luas_lingkaran_hasil").val(luas);
+      $("#luas_lingkaran_r").val('');
+    }
+
+    function hitung_kel_lingkaran(){
+      var r = $("#kel_lingkaran_r").val();
+      var kel = 2 * 3.14 * r;
+      $("#kel_lingkaran_hasil").val(kel);
+      $("#kel_lingkaran_r").val('');
+    }
+
+    function hitung_diameter_lingkaran(){
+      var r = $("#diameter_lingkaran_r").val();
+      var diameter = 2 * r;
+      $("#diameter_lingkaran_hasil").val(diameter);
+      $("#diameter_lingkaran_r").val('');
     }
 
   </script>
